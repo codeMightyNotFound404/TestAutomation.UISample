@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
 
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 
 public class ScreenShot extends SuperClass  {
 

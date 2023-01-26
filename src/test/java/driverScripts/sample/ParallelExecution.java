@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 import test.automation.helper.ExternalReporter;
 
 import org.openqa.selenium.By;

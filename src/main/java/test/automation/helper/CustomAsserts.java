@@ -1,7 +1,7 @@
 package test.automation.helper;
 
 import com.aventstack.extentreports.Status;
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 
 import java.util.List;
 

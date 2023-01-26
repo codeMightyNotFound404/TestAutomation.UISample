@@ -21,9 +21,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcel {
 
+	private ReadExcel excel=null;
+
 	FileInputStream fis=null;
 	XSSFWorkbook workbook=null;
 	Sheet sheet=null;
+
+	public ReadExcel getIntance()
+	{
+		if(excel==null)
+			excel=new ReadExcel();
+		return excel;
+	}
 
 	public HashMap<Integer,List<String>> getExcelData(String sheetName,String excelPath)
 	{

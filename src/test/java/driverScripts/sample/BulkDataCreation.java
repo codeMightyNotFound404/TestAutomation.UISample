@@ -8,7 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 import test.automation.helper.ExternalReporter;
 import test.automation.helper.ReadExcel;
 import test.automation.helper.WriteExcel;

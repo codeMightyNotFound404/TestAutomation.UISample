@@ -5,8 +5,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 
+import java.time.Duration;
 import java.util.Set;
 
 public class UIActions extends SuperClass {
@@ -206,7 +207,7 @@ public class UIActions extends SuperClass {
 
     }
 
-    public int getWindowsCount() throws NoSuchWindowException
+    public int getCurrentWindowsCount() throws NoSuchWindowException
     {
         Set<String> windowsname=driver.getWindowHandles();
         return windowsname.size();
@@ -225,14 +226,14 @@ public class UIActions extends SuperClass {
         }
     }
 
-    public int framecount()
+    public int frameCount()
     {
         return driver.findElements(By.xpath("//./iframe")).size();
     }
 
     public WebDriverWait expilictWait()
     {
-        wait =new WebDriverWait(driver, 30);
+        wait =new WebDriverWait(driver, Duration.ofSeconds(30));
         return wait;
     }
 
@@ -240,4 +241,11 @@ public class UIActions extends SuperClass {
     {
         return element.getAttribute(attributeName);
     }
+
+    public boolean clickAction(WebElement element)
+    {
+        //To Be imp
+        return false;
+    }
+
 }

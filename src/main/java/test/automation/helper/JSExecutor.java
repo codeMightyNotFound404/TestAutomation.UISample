@@ -5,9 +5,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import test.automation.SuperClass;
+import test.automation.rare.SuperClass;
 
 public class JSExecutor extends SuperClass {
+
+	private JSExecutor executor;
+
+	public JSExecutor getInstance()
+	{
+	   if(executor==null)
+		   executor=new JSExecutor();
+	   return executor;
+	}
 
 	public JSExecutor() {
 	PageFactory.initElements(driver, this);	
