@@ -11,11 +11,11 @@ UISample is a Java-based test automation framework that unites all testing layer
 * Framework supports different types of databases including MySQL, SQL Server, Oracle 
 
 * API testing is through the Rest-Assured . It enables great flexibility in generating REST requests and responses are dynamically changed by incoming arguments. This framework covers several type of functional and non function testing including 
-  *Performance Testing
-  *Load Testing
-  *Security Testing 
-  *Schema Validation 
-  *Request/Response Testing 
+  * Performance Testing
+  * Load Testing
+  * Security Testing 
+  * Schema Validation 
+  * Request/Response Testing 
   
 
 ![Alt text](To be Imp "FrameWork Overview")
