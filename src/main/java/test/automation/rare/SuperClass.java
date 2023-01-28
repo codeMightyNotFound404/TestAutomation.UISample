@@ -19,14 +19,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class SuperClass {
-	
+
 	public  WebDriver driver;
     public  Properties prop;
     public  static ExtentHtmlReporter htmlReporter;
 	public  static ExtentReports extent;
 	public ExtentTest logger;
 
-	
+
 	synchronized public void browserinitialization(String type)
 	{
 		type.toLowerCase();
@@ -35,12 +35,12 @@ public class SuperClass {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "/absolute/path/to/binary/chromedriver");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("start-maximized"); 
-			options.addArguments("enable-automation"); 
-			options.addArguments("--no-sandbox"); 
+			options.addArguments("start-maximized");
+			options.addArguments("enable-automation");
+			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-infobars");
 			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--disable-browser-side-navigation"); 
+			options.addArguments("--disable-browser-side-navigation");
 			options.addArguments("--disable-gpu");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -50,7 +50,7 @@ public class SuperClass {
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", "/absolute/path/to/binary/geckodriver");
 			WebDriverManager.firefoxdriver().setup();
-			break;	
+			break;
 		case "safari":
 			 driver=new SafariDriver();
 			break;
@@ -69,8 +69,8 @@ public class SuperClass {
 		e.printStackTrace();
 		}
  	}
-	
-	
+
+
 	public void reportResult(ITestResult result,ExtentTest logger)
 	{
 		  if(result.getStatus() == ITestResult.FAILURE)
@@ -80,15 +80,15 @@ public class SuperClass {
 				logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
                  ScreenShot shot=new ScreenShot();
 				//String screenshotPath = shot.screenShot(prop.getProperty("scr_shot"));
-				//To add it in the extent report 
+				//To add it in the extent report
 
 				//logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(""));
 
 			}
 			else if(result.getStatus() == ITestResult.SKIP){
 				//logger.log(Status.SKIP, "Test Case Skipped is "+result.getName());
-				logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE)); 
-			} 
+				logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+			}
 			else if(result.getStatus() == ITestResult.SUCCESS)
 			{
 				logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));

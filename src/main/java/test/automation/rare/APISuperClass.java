@@ -8,10 +8,7 @@ public class APISuperClass {
     public RequestSpecification request;
     public Response response;
     public static String tokenNumber;
-    public APISuperClass()
-    {
-
-    }
+    public APISuperClass() {}
 
     public APISuperClass(RequestSpecification request)
     {
@@ -23,15 +20,9 @@ public class APISuperClass {
          return tokenNumber;
     }
 
-    public Response postAction(){
+    public Response postAction(){return response;}
 
-        return response;
-    }
-
-    public Response getAction(){
-
-        return response;
-    }
+    public Response getAction(){return response;}
 
    public  Response patchAction()
    {
