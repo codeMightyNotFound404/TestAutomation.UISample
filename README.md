@@ -22,7 +22,7 @@ UISample is a Java-based test automation framework that unites all testing layer
 
 
 ## Author Profile - 
-* [Viren](https://www.linkedin.com/in/viren-tiwari-734b9b85/)
+* [Viren Tiwari](https://www.linkedin.com/in/viren-tiwari-734b9b85/)
 * [Script Demo](https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/java/driverScripts/sample/UISample.java)
 
 
