@@ -1,5 +1,7 @@
 package test.automation.helper;
-
+/**
+ * @Author : Viren Tiwari
+ */
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -11,6 +13,8 @@ public class JSExecutor extends SuperClass {
 
 	private JSExecutor executor;
 
+	private JavascriptExecutor jsexecutor;
+
 	public JSExecutor getInstance()
 	{
 	   if(executor==null)
@@ -19,10 +23,10 @@ public class JSExecutor extends SuperClass {
 	}
 
 	public JSExecutor() {
-	PageFactory.initElements(driver, this);	
+	PageFactory.initElements(driver, this);
+		jsexecutor= (JavascriptExecutor) driver;
 	}
 
-	JavascriptExecutor jsexecutor= (JavascriptExecutor) driver;
 	
 	public void windowScrollBy(int x ,int y)
 	{

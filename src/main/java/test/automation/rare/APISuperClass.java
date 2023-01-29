@@ -1,43 +1,53 @@
 package test.automation.rare;
 
+import io.restassured.RestAssured;
+import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.json.simple.JSONObject;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class APISuperClass {
 
-    public RequestSpecification request;
-    public Response response;
-    public static String tokenNumber;
-    public APISuperClass() {}
+    private RequestSpecification request;
+    private Response response;
+    private static String tokenNumber;
+
+    public APISuperClass() {
+        RestAssured.baseURI="";
+    }
 
     public APISuperClass(RequestSpecification request)
     {
         this.request=request;
+        RestAssured.baseURI="";
     }
 
     public static String generatetoken()
     {
-         return tokenNumber;
+         //To be Imp
+        return tokenNumber;
     }
 
-    public Response postAction(){return response;}
+    public Response postAction(String endPoint){return response;}
 
-    public Response getAction(){return response;}
+    public Response getAction(String endPoint){return response;}
 
-   public  Response patchAction()
+   public  Response patchAction(String endPoint)
    {
        return response;
    }
 
-   public Response deleteAction()
+   public Response deleteAction(String endPoint)
    {
        return response;
    }
 
-   public Response putAction()
+   public Response putAction(String endPoint)
    {
        return response;
    }
-
 
 }

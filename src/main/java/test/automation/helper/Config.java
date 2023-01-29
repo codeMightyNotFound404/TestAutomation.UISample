@@ -1,20 +1,41 @@
 package test.automation.helper;
 
+import java.io.FileReader;
+import java.util.Properties;
+
 public class Config {
 
     //To be implemented
+    private String filePath;
 
-    public static String getUserName(String key){ return null;
-    };
+    private Properties prop;
 
-    public static char[] getPassword(String key){ return null;
-    };
+    private FileReader reader;
 
-    public static String getURL(String key){ return null;
-    };
 
-    public static String getAPIEndPoint(String key){ return null;
-    };
+    public Config(String filename) throws Exception
+    {
+        filePath="src//main//resource//"+filename+".properties";
+        prop=new Properties();
+        reader=new FileReader(filePath);
+        prop.load(reader);
+
+    }
+    public String getUserName(String key){
+        return prop.getProperty(key);
+    }
+
+    public char[] getPassword(String key){
+        return prop.getProperty(key).toCharArray();
+    }
+
+    public String getURL(String key){
+        return prop.getProperty(key);
+    }
+
+    public String getAPIEndPoint(String key){
+        return prop.getProperty(key);
+    }
 
 
 }
