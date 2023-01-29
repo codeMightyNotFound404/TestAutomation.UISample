@@ -17,14 +17,18 @@ UISample is a Java-based test automation framework that unites all testing layer
   * Schema Validation 
   * Request/Response Testing 
 
+<object data="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf">
+        <p>Here is the Sample API Doc for refrence <a href="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 
 ## Author Profile - 
 <img src="https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/SupportDoc/peter.png" width="200" height="200"/>
 
 * [Viren Tiwari](https://www.linkedin.com/in/viren-tiwari-734b9b85/)
 * [Script Demo](https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/java/driverScripts/sample/UISample.java)
-* ![](https://github.com/codeMightyNotFound404/TestAutomation.UISample/blob/main/src/test/resource/APIDoc/Document%2012.pdf) 
-
 
 
 ## References - 
