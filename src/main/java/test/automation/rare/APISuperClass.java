@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 public class APISuperClass {
 
     private RequestSpecification request;
-    private Response response;
+    protected Response response;
     private static String tokenNumber;
 
     public APISuperClass() {
