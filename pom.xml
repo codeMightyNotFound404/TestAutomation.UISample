@@ -5,10 +5,10 @@
 
 	<!-- ******************************* Project Artifact Details ******************************** -->
 	<groupId>Test.Adavance.Automation</groupId>
-	<artifactId>TestAutomation.Expert</artifactId>
+	<artifactId>TestAutomation.UISample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>TestAutomation.Expert</name>
+	<name>TestAutomation.UISample</name>
 	<url>http://maven.apache.org</url>
 
 	<!-- ******************************* Properties Details ******************************** -->

@@ -5,11 +5,12 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.simple.JSONObject;
+import test.automation.BluePrints.Base;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-public class APISuperClass {
+public class APISuperClass implements Base {
 
     private RequestSpecification request;
     protected Response response;

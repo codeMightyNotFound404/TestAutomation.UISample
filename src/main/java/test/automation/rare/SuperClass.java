@@ -12,13 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
+import test.automation.BluePrints.Base;
 import test.automation.helper.ScreenShot;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Properties;
 
-public class SuperClass {
+public class SuperClass  implements Base {
 
 	public  WebDriver driver;
     public  Properties prop;
@@ -57,18 +56,6 @@ public class SuperClass {
 		}
 	}
 
-	public void loadProperty(String filePath)
-	{
-		try {
-		FileReader is=new FileReader(filePath);
-	    prop=new Properties();
-		prop.load(is);
-		}
-		catch(IOException e)
-		{
-		e.printStackTrace();
-		}
- 	}
 
 
 	public void reportResult(ITestResult result,ExtentTest logger)
