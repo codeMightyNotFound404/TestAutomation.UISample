@@ -1,7 +1,7 @@
 package test.automation.pages;
 
 import org.openqa.selenium.support.PageFactory;
-import test.automation.rare.SuperClass;
+import test.automation.Elite.SuperClass;
 
 public class ObjectManager extends SuperClass {
 	

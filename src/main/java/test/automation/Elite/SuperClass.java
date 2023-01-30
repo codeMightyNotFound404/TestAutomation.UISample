@@ -1,4 +1,4 @@
-package test.automation.rare;
+package test.automation.Elite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
-import test.automation.BluePrints.Base;
+import test.automation.Models.Base;
 import test.automation.helper.ScreenShot;
 
 import java.util.Properties;

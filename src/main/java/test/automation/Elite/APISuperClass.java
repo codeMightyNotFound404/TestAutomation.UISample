@@ -1,14 +1,9 @@
-package test.automation.rare;
+package test.automation.Elite;
 
 import io.restassured.RestAssured;
-import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.json.simple.JSONObject;
-import test.automation.BluePrints.Base;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+import test.automation.Models.Base;
 
 public class APISuperClass implements Base {
 
