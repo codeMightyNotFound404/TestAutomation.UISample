@@ -16,53 +16,59 @@ import org.testng.annotations.AfterSuite;
 
 public class UISample {
 
-  // To be Implement
+  //To Be Imp By User
 	ReadExcel readExcel=new ReadExcel();
 	
   @Test(dataProvider = "TestAutomationData")
   public void f(Integer n, String s) {
-	  
+	  //To Be Imp By User
   }
   @BeforeMethod
   public void beforeMethod() {
-	
+    //To Be Imp By User
   }
 
   @AfterMethod
   public void afterMethod() {
+    //To Be Imp By User
   }
 
 
   @DataProvider(name="empLogin")
-	public Object[][] loginData() {
-		Object[][] arrayObject = readExcel.getExcel2D("D://sampledoc.xls","Sheet1");
+	public Object[][] loginData(String filepath,String sheetName) {
+		Object[][] arrayObject = readExcel.getExcel2D(filepath,sheetName);
 		return arrayObject;
 	}
 
 	
   @BeforeClass
   public void beforeClass() {
+    //To Be Imp By User
   }
 
   @AfterClass
   public void afterClass() {
+    //To Be Imp By User
   }
 
   @BeforeTest
   public void beforeTest() {
-	  
+    //To Be Imp By User
   }
 
   @AfterTest
   public void afterTest() {
+    //To Be Imp By User
   }
 
   @BeforeSuite
   public void beforeSuite() {
+    //To Be Imp By User
   }
 
   @AfterSuite
   public void afterSuite() {
+    //To Be Imp By User
   }
 
 }

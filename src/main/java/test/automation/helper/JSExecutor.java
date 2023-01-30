@@ -7,7 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import test.automation.rare.SuperClass;
+import test.automation.Elite.SuperClass;
 
 public class JSExecutor extends SuperClass {
 

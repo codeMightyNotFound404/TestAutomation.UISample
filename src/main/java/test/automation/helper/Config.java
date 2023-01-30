@@ -21,20 +21,12 @@ public class Config {
         prop.load(reader);
 
     }
-    public String getUserName(String key){
+    public String getValue(String key){
         return prop.getProperty(key);
     }
 
     public char[] getPassword(String key){
         return prop.getProperty(key).toCharArray();
-    }
-
-    public String getURL(String key){
-        return prop.getProperty(key);
-    }
-
-    public String getAPIEndPoint(String key){
-        return prop.getProperty(key);
     }
 
 

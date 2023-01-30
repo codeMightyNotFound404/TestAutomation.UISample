@@ -3,7 +3,7 @@
 <suite name="MySuite">
   <test thread-count="5" name="MyTest">
     <classes>
-      <class name="driverScripts.sample.ParallelExecution"/>
+      <class name="driverScripts.sample.UISample"/>
     </classes>
   </test> <!-- MyTest -->
 </suite> <!-- MySuite -->
