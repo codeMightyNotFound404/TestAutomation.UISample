@@ -3,7 +3,7 @@ package test.automation.commons;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.json.simple.JSONObject;
-import test.automation.rare.APISuperClass;
+import test.automation.Elite.APISuperClass;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

@@ -19,11 +19,13 @@ public class DBConnections {
 	private Connection connection;
 	public Statement statement=null;
 	public ResultSet dbResult =null;
-
 	private  DBConnections dbConnections;
 
-	private DBConnections()
-	{}
+	private String url , username , dbname;
+	private char[] password;
+
+	private DBConnections() {}
+
 
 	public DBConnections getIntance()
 	{
@@ -31,7 +33,24 @@ public class DBConnections {
 			dbConnections=new DBConnections();
 		return dbConnections;
 	}
-	private DBConnections(String url,String username,String password,String dbname) throws SQLException {
+
+	public DBConnections getIntance(String url,String username,char[] password,String dbname) throws SQLException
+	{
+		if(dbConnections!=null)
+			dbConnections=new DBConnections(this.url=url,this.username=username,this.password=password,this.dbname=dbname);
+		return dbConnections;
+	}
+
+	/**
+	public DBConnections getIntance(String url_username_password,String dbname) throws SQLException
+	{
+		if(dbConnections!=null)
+			dbConnections=new DBConnections(this.url_username_password=username,this.dbname=dbname);
+		return dbConnections;
+	}
+	 **/
+
+	public DBConnections(String url,String username,char[] password,String dbname) throws SQLException {
 		try {
 			if(dbname.equalsIgnoreCase("oracle"))
 			{
@@ -46,12 +65,13 @@ public class DBConnections {
 				throw new ClassNotFoundException();
 			}
 			
-			connection = DriverManager.getConnection(url, username, password);
+			connection = DriverManager.getConnection(url, username, password.toString());
 		} catch (ClassNotFoundException e) {
 			System.out.println("Database Connection Creation Failed : " + e.getMessage());
 		}
 	}
 
+	/**
 	private DBConnections(String url_username_password,String dbname) throws SQLException {
 		try {
 			if(dbname.equalsIgnoreCase("oracle"))
@@ -72,7 +92,7 @@ public class DBConnections {
 			System.out.println("Database Connection Creation Failed : " + e.getMessage());
 		}
 	}
-	
+	**/
 	
 
   public boolean dbUpdate(String query)

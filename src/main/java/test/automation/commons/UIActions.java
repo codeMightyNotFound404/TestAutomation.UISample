@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import test.automation.rare.SuperClass;
+import test.automation.Elite.SuperClass;
 
 import java.time.Duration;
 import java.util.Set;
