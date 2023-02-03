@@ -7,7 +7,13 @@ import java.util.List;
 
 public class CustomAsserts extends SuperClass{
 
-	
+	/**
+	 *
+	 * @param actual
+	 * @param expected
+	 * @param message
+	 * @return
+	 */
 	public boolean isPass(List<String> actual,List<String> expected,String message)
 	{
 		if(expected.containsAll(actual))
@@ -24,7 +30,14 @@ public class CustomAsserts extends SuperClass{
 		return false;
 		}
 	}
-	
+
+	/**
+	 *
+	 * @param actual
+	 * @param expected
+	 * @param message
+	 * @return
+	 */
 	public boolean isPass(String actual,String expected,String message)
 	{
 		if(expected.equalsIgnoreCase(actual))
@@ -41,7 +54,14 @@ public class CustomAsserts extends SuperClass{
 		return false;
 		}
 	}
-	
+
+	/**
+	 *
+	 * @param actual
+	 * @param expected
+	 * @param message
+	 * @return
+	 */
 	public boolean isPass(int actual,int expected,String message)
 	{
 		if(expected==actual)
@@ -59,7 +79,13 @@ public class CustomAsserts extends SuperClass{
 		}
 	}
 
-	
+	/**
+	 *
+	 * @param actual
+	 * @param expected
+	 * @param message
+	 * @return
+	 */
 	public boolean isPass( boolean actual,boolean expected,String message)
 	{
 		if(expected==actual)
@@ -76,9 +102,15 @@ public class CustomAsserts extends SuperClass{
 		return false;
 		}
 	}
-	
-	
 
+
+	/**
+	 *
+	 * @param actual
+	 * @param expected
+	 * @param message
+	 * @return
+	 */
 	public boolean isPass( char actual,char expected,String message)
 	{
 		if(String.valueOf(expected).equalsIgnoreCase(String.valueOf(actual)))

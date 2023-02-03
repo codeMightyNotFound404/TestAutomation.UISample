@@ -21,6 +21,14 @@ public class ScreenShot extends SuperClass  {
 	}
 
 	//To Be Implement
+
+	/**
+	 * To get the screenshot /attached with extends report
+	 * @param filepath
+	 * @param testcasename
+	 * @param featurefile
+	 * @throws IOException
+	 */
 	public void screenShot(String filepath,String testcasename,String featurefile) throws IOException
 	{
 		File targetfile=null,sourceFile,targetDir;

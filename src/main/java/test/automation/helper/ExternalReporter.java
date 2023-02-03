@@ -13,9 +13,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import test.automation.Elite.SuperClass;
 
 public class ExternalReporter extends SuperClass {
-	    
-	 
-	 
+
+
+	/**
+	 *
+	 * @param reportPath
+	 * @param reportName
+	 * @param reportfolder
+	 * @throws FileNotFoundException
+	 */
 	public ExternalReporter(String reportPath,String reportName,String reportfolder) throws FileNotFoundException {
 		File file=new File(reportPath+"//"+reportfolder);
 		if(!file.exists())
@@ -33,7 +39,8 @@ public class ExternalReporter extends SuperClass {
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
 	}
-	
+
+
 	public void reportflush()
 	{
 		extent.flush();
