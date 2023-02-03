@@ -12,7 +12,10 @@ public class Config {
 
     private FileReader reader;
 
-
+    /**
+     * @param filename
+     * @throws Exception
+     */
     public Config(String filename) throws Exception
     {
         filePath="src//main//resource//"+filename+".properties";

@@ -20,6 +20,13 @@ public class WriteExcel {
 	Row row=null;
 	Cell cell=null;
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @param outdata
+	 * @return
+	 */
 	public boolean setExcelData(String sheetName,String excelPath, HashMap<Integer ,List<String>> outdata)
 	{
 
@@ -66,6 +73,14 @@ public class WriteExcel {
 		}
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @param rowNumber
+	 * @param outdata
+	 * @return
+	 */
 	public boolean setExcelRow(String sheetName,String excelPath,int rowNumber,List<String> outdata)
 	{
 		try {
@@ -126,6 +141,14 @@ public class WriteExcel {
 
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @param columnNumber
+	 * @param outdata
+	 * @return
+	 */
 	public boolean setExcelColumn(String sheetName,String excelPath,int columnNumber ,List<String> outdata)
 	{
 		try {

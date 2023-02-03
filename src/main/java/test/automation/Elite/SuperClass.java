@@ -25,7 +25,9 @@ public class SuperClass  implements Base {
 	public  static ExtentReports extent;
 	public ExtentTest logger;
 
-
+	/**
+	 * @param type
+	 */
 	synchronized public void browserinitialization(String type)
 	{
 		type.toLowerCase();
@@ -57,7 +59,10 @@ public class SuperClass  implements Base {
 	}
 
 
-
+	/**
+	 * @param result
+	 * @param logger
+	 */
 	public void reportResult(ITestResult result,ExtentTest logger)
 	{
 		  if(result.getStatus() == ITestResult.FAILURE)

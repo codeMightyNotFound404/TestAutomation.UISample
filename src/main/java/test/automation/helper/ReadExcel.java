@@ -38,6 +38,12 @@ public class ReadExcel {
 		return excel;
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @return
+	 */
 	public HashMap<Integer,List<String>> getExcelData(String sheetName,String excelPath)
 	{
 		HashMap<Integer,List<String>> testdata=new LinkedHashMap<Integer,List<String>>();
@@ -86,6 +92,13 @@ public class ReadExcel {
 		}
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @param rowNumber
+	 * @return
+	 */
 	public List<String> getExcelRow(String sheetName,String excelPath,int rowNumber)
 	{
 		List<String> testdata=new ArrayList<String>();
@@ -126,6 +139,13 @@ public class ReadExcel {
 		}
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @param columnNumber
+	 * @return
+	 */
 	public List<String> getExcelColumn(String sheetName,String excelPath,int columnNumber)
 	{
 		List<String> testdata=new ArrayList<String>();
@@ -166,6 +186,12 @@ public class ReadExcel {
 		}
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @return
+	 */
 	public int getExcelRowCount(String sheetName,String excelPath)
 	{
 		try {
@@ -180,6 +206,12 @@ public class ReadExcel {
 		}
 	}
 
+	/**
+	 *
+	 * @param sheetName
+	 * @param excelPath
+	 * @return
+	 */
 	public int getExcelColumnCount(String sheetName,String excelPath)
 	{
 		try {
@@ -204,6 +236,11 @@ public class ReadExcel {
 
 	}
 
+	/**
+	 *
+	 * @param cell
+	 * @return
+	 */
 	public String cellconvertor(Cell cell)
 	{
 		try {
@@ -232,8 +269,13 @@ public class ReadExcel {
 			throw new NullPointerException();
 		}
 	}
-	
-	
+
+	/**
+	 *
+	 * @param excelPath
+	 * @param sheetName
+	 * @return
+	 */
 	public String[][] getExcel2D (String excelPath, String sheetName) {
 		String[][] arrayExcelData = null;
 		try {

@@ -25,6 +25,11 @@ public class JSONActions {
         return json;
     }
 
+    /**
+     *
+     * @param jsonPath
+     * @return
+     */
     public JSONObject readJson(String jsonPath) {
         try (FileReader reader=new FileReader(jsonPath))
         {
@@ -38,6 +43,12 @@ public class JSONActions {
         return null;
     }
 
+    /**
+     *
+     * @param jsonPath
+     * @param node
+     * @return
+     */
     public Object readJson(String jsonPath,String node)
     {
         try (FileReader reader=new FileReader(jsonPath))
@@ -54,6 +65,13 @@ public class JSONActions {
         return null;
     }
 
+    /**
+     *
+     * @param filePath
+     * @param jsonObject
+     * @param override
+     * @return
+     */
     public boolean writeJson(String filePath,JSONObject jsonObject,Boolean override)
     {
         try(FileWriter file =new FileWriter(filePath,override))

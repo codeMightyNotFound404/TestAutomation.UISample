@@ -20,6 +20,9 @@ public class UIActions extends SuperClass {
     Alert alert;
     Select select;
 
+    /**
+     * @return string
+     */
     public String getAlertData()
     {
         try {
@@ -34,6 +37,10 @@ public class UIActions extends SuperClass {
         }
     }
 
+    /**
+     * @param testdata
+     * @return boolean
+     */
     public boolean setAlertData(String testdata)
     {
         try {
@@ -49,7 +56,10 @@ public class UIActions extends SuperClass {
         }
     }
 
-
+    /**
+     * @param action
+     * @return boolean
+     */
     public boolean setActiononAlert(String action)
     {
         try {
@@ -79,7 +89,10 @@ public class UIActions extends SuperClass {
 
     }
 
-
+    /**
+     * @param element
+     * @return
+     */
     public boolean isElementExist(WebElement element)
     {
         try {
@@ -92,12 +105,23 @@ public class UIActions extends SuperClass {
         }
     }
 
+    /**
+     * @param element
+     * @param filepath
+     */
     public void uploadFile(WebElement element,String filepath)
     {
         element.sendKeys(filepath);
 
     }
 
+    /**
+     * @param element
+     * @param Opration
+     * @param testdata
+     * @return
+     * @throws NoSuchElementException
+     */
     public boolean selectDropdown(WebElement element,String Opration,String testdata) throws NoSuchElementException
     {
 
@@ -125,6 +149,14 @@ public class UIActions extends SuperClass {
 
     }
 
+    /**
+     *
+     * @param element
+     * @param Opration
+     * @param testdata
+     * @return
+     * @throws NoSuchElementException
+     */
     public boolean deselectDropdown(WebElement element,String Opration,String testdata) throws NoSuchElementException
     {
 
@@ -152,7 +184,10 @@ public class UIActions extends SuperClass {
 
     }
 
-
+    /**
+     *
+     * @return
+     */
     public boolean isdriverAlive()
     {
         try {
@@ -165,6 +200,9 @@ public class UIActions extends SuperClass {
         }
     }
 
+    /**
+     * @return
+     */
     public boolean switchToWindow()
     {
         String currentWindowName=driver.getWindowHandle();
@@ -186,6 +224,29 @@ public class UIActions extends SuperClass {
 
     }
 
+    /**
+     * @param windowType
+     * @return
+     */
+    public String switchToNewWindow(String windowType)
+    {
+        if(windowType.equalsIgnoreCase("window")) {
+            driver.switchTo().newWindow(WindowType.WINDOW);
+            return driver.getWindowHandle();
+        }
+        else if(windowType.equalsIgnoreCase("Tab")) {
+            driver.switchTo().newWindow(WindowType.TAB);
+            return driver.getWindowHandle();
+        }
+        return null;
+    }
+
+
+
+    /**
+     * @param windowname
+     * @return
+     */
     public boolean switchToWindow(String windowname)
     {
 
@@ -207,6 +268,10 @@ public class UIActions extends SuperClass {
 
     }
 
+    /**
+     * @return
+     * @throws NoSuchWindowException
+     */
     public int getCurrentWindowsCount() throws NoSuchWindowException
     {
         Set<String> windowsname=driver.getWindowHandles();
@@ -214,6 +279,9 @@ public class UIActions extends SuperClass {
 
     }
 
+    /**
+     * @return
+     */
     public boolean isFrameExist()
     {
         try {
@@ -226,22 +294,40 @@ public class UIActions extends SuperClass {
         }
     }
 
+    /**
+     * @return
+     */
     public int frameCount()
     {
         return driver.findElements(By.xpath("//./iframe")).size();
     }
 
+    /**
+     *
+     * @return
+     */
     public WebDriverWait expilictWait()
     {
         wait =new WebDriverWait(driver, Duration.ofSeconds(30));
         return wait;
     }
 
+    /**
+     *
+     * @param element
+     * @param attributeName
+     * @return
+     */
     public String getAttributeValue(WebElement element,String attributeName)
     {
         return element.getAttribute(attributeName);
     }
 
+    /**
+     *
+     * @param element
+     * @return
+     */
     public boolean clickAction(WebElement element)
     {
         //To Be imp

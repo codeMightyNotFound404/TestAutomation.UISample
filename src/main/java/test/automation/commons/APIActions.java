@@ -25,31 +25,52 @@ public class APIActions extends APISuperClass {
         return  RestAssured.given().headers(setHeaders("")).params(setQueryParam("")).when().get();
        }
 
+    /**
+     * @return
+     */
     public  Response patchAction()
     {
         return response;
     }
 
+    /**
+     * @return
+     */
     public Response deleteAction()
     {
         return response;
     }
 
+    /**
+     * @return
+     */
     public Response putAction()
     {
         return response;
     }
 
+    /**
+     * @param node
+     * @return
+     */
     public HashMap<String,String> setHeaders(String node){
         HashMap<String,String> headers=new LinkedHashMap<>();
         return headers;
     }
 
+    /**
+     * @param node
+     * @return
+     */
     public HashMap<String,String> setQueryParam(String node){
         HashMap<String,String> headers=new LinkedHashMap<>();
         return headers;
     }
 
+    /**
+     * @param node
+     * @return
+     */
     public JSONObject setPayload(String node){
         JSONObject object =new JSONObject();
         return object;

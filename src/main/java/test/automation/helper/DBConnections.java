@@ -34,6 +34,15 @@ public class DBConnections {
 		return dbConnections;
 	}
 
+	/**
+	 *
+	 * @param url
+	 * @param username
+	 * @param password
+	 * @param dbname
+	 * @return
+	 * @throws SQLException
+	 */
 	public DBConnections getIntance(String url,String username,char[] password,String dbname) throws SQLException
 	{
 		if(dbConnections!=null)
@@ -50,6 +59,14 @@ public class DBConnections {
 	}
 	 **/
 
+	/**
+	 *
+	 * @param url
+	 * @param username
+	 * @param password
+	 * @param dbname
+	 * @throws SQLException
+	 */
 	public DBConnections(String url,String username,char[] password,String dbname) throws SQLException {
 		try {
 			if(dbname.equalsIgnoreCase("oracle"))
@@ -93,8 +110,12 @@ public class DBConnections {
 		}
 	}
 	**/
-	
 
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
   public boolean dbUpdate(String query)
   {
 	  try {
@@ -108,6 +129,11 @@ public class DBConnections {
 	   
   }
 
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
   public boolean dbdelete(String query)
   {
 	  try {
@@ -121,6 +147,11 @@ public class DBConnections {
 	  
   }
 
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
   public List<String> dbSelect(String query)
   {
 	  List<String> dbdata=new ArrayList<String>();
@@ -137,9 +168,13 @@ public class DBConnections {
 		return null;
 	}  
   }
-  
-  
-  public HashMap<String,String> dbSelectWithcolName(String query)
+
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
+	public HashMap<String,String> dbSelectWithcolName(String query)
   {
 	  HashMap<String,String> dbdata=new LinkedHashMap<String,String>();
 	  try {
@@ -153,11 +188,14 @@ public class DBConnections {
 	} catch (SQLException e) {
 		return null;
 	}
-	  
-	  
   }
- 
-  public int dbRowCount(String query)
+
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
+	public int dbRowCount(String query)
   {
 	  int rowcount =0;
 	  try {
@@ -171,8 +209,13 @@ public class DBConnections {
 			return 0;
 		}
   }
-  
-  public int dbcolumnCount(String query)
+
+	/**
+	 *
+	 * @param query
+	 * @return
+	 */
+	public int dbcolumnCount(String query)
   {
 	  
 	  try {
@@ -185,8 +228,14 @@ public class DBConnections {
 			return 0;
 		}
   }
-  
-  public String dbgetcolumn(String query,String columnName)
+
+	/**
+	 *
+	 * @param query
+	 * @param columnName
+	 * @return
+	 */
+	public String dbgetcolumn(String query,String columnName)
   {
 	  try {
 		  
@@ -198,8 +247,12 @@ public class DBConnections {
 			return null;
 		}
   }
-  
-  public boolean close()
+
+	/**
+	 *
+	 * @return
+	 */
+	public boolean close()
   {
 	  try {
 		connection.close();

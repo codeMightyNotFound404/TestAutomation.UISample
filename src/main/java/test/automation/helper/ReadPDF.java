@@ -21,7 +21,12 @@ public class ReadPDF {
         return pdf;
     }
 
-
+    /**
+     *
+     * @param filepath
+     * @param pageNum
+     * @return
+     */
 	public String getPDFText(String filepath,int pageNum)
 	{
         try {
@@ -39,6 +44,11 @@ public class ReadPDF {
          return pdfText;
 	}
 
+    /**
+     *
+     * @param filepath
+     * @return
+     */
     public String getPDFText(String filepath)
     {
         int pages=0;
