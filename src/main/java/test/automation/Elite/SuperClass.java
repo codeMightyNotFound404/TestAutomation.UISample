@@ -34,7 +34,6 @@ public class SuperClass  implements Base {
 		switch(type)
 		{
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "/absolute/path/to/binary/chromedriver");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized");
 			options.addArguments("enable-automation");
